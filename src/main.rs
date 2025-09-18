@@ -19,8 +19,7 @@ fn main() {
                 continue;
             }
         };
-        let correct = update_blanks(guess_word, &mut word_progress, guess);
-        if !correct {
+        if !update_blanks(guess_word, &mut word_progress, guess) {
             attempts -= 1;
             println!("You have {attempts} left");
         }
